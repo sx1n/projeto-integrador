@@ -1,15 +1,25 @@
+:root {
+  --primary-color: #5d00e5;
+  --white-color: #ffffff;
+  --black-color: #1e2026;
+}
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  outline: none;
 }
 
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  font-family: "Inter", sans-serif;
 }
 
 body {
   font-size: 1.6rem;
+  color: var(--white-color);
 }
 
 h1,
@@ -18,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 h1 {
@@ -53,12 +63,26 @@ a {
   text-decoration: none;
 }
 
+.main-content {
+  max-width: 1200px;
+  padding: 8rem 3rem;
+}
+
 .menu {
-  background-color: lightgrey;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 6vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .menu-navbar {
@@ -70,11 +94,72 @@ a {
   display: flex;
   justify-content: space-evenly;
   flex-flow: row wrap;
+  color: var(--white-color);
+}
+
+.menu-navbar-content li a {
+  color: inherit;
 }
 
 .hero {
   min-height: 100vh;
-  background-color: dimgrey;
+  background-color: var(--black-color);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  position: relative;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "text image";
+  gap: 3rem;
+  padding: 6vh;
+}
+
+.hero-text {
+  grid-area: text;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+
+.hero-text .hero-heading {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+.hero-text .hero-description {
+  font-size: 1.5rem;
+}
+
+.hero-img {
+  height: 100%;
+  grid-area: image;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-img img,
+.hero-img svg {
+  max-width: 100%;
+  min-height: auto;
+}
+
+.hero-text .btn-start-now {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  width: 15rem;
+  min-height: 4rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.online {
+  color: #008000;
+}
+
+.offline {
+  color: #B31415;
 }
