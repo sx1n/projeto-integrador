@@ -70,9 +70,7 @@ a {
 
 .menu {
   background: rgba(30, 32, 38, 0.35);
-  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
-  backdrop-filter: blur(13.5px);
-  -webkit-backdrop-filter: blur(13.5px);
+  backdrop-filter: blur(2rem);
   border: 1px solid rgba(255, 255, 255, 0.18);
   display: flex;
   justify-content: center;
@@ -123,10 +121,13 @@ a {
 .hero-text .hero-heading {
   font-size: 8rem;
   font-weight: 900;
+  text-align: left;
+
 }
 
 .hero-text .hero-description {
   font-size: 2rem;
+  text-align: left;
 }
 
 .hero-img {
@@ -149,7 +150,7 @@ a {
   width: 25rem;
   min-height: 5rem;
   cursor: pointer;
-  padding: 1rem 2rem;
+  padding: 1.5rem 1rem;
   border-radius: 1rem;
   border: none;
   margin-top: 2rem;
